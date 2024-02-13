@@ -104,6 +104,7 @@ namespace DatabaseConnection
             {
                 this.connector = connector;
                 connection = new OleDbConnection(connector.connectionString);
+                connection.Open();
                 transaction = connection.BeginTransaction();
             }
 
